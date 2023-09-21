@@ -249,6 +249,19 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
   transform: translate(calc(50% - 15px));
 }
 
+.searchbox {
+  background-color: #f3f3f3;
+  display: inline-block;
+  border-radius: 25px;
+  padding: 8px 20px;
+}
+.searchbox input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.8em;
+}
+
 .showcase {
   background-color: #F0EFE9;
 }
@@ -342,6 +355,37 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
   color: #626262;
   font-size: 17px;
   padding-bottom: 40px;
+}
+
+.aboutus-section {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #D3D3D3;
+  background-color: #F0EFE9;
+}
+.aboutus-section .aboutbox {
+  align-items: center;
+  margin-bottom: 50px;
+}
+@media (min-width: 992px) {
+  .aboutus-section .aboutbox {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+.aboutus-section .section-title {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.aboutus-section .section-title .featbox {
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+.aboutus-section .header-text {
+  font-size: 2px;
+  font-weight: 500;
+  line-height: 48px;
 }
 
 .service-box {
@@ -469,4 +513,34 @@ header .menu nav a.active::after, header .menu nav a:hover::after {
 .project-section .container .center-content {
   margin-top: 50px;
   margin-bottom: 90px;
+}
+
+.newsletter {
+  background-color: #F0EFE9;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.newsletter .Background-wavy-lines {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
+.newsletter .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newsletter .container h2 {
+  font-family: "DM sans", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+}
+.newsletter .container form input {
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 25px;
+  outline: none;
+  border: 1px solid #DAD9D3;
+  margin-right: 20px;
 }
