@@ -1179,3 +1179,71 @@ header {
         border-bottom: 1px solid #DAD9D3;
     }
 }
+
+// Contacts page 
+
+.connect-section {
+    background-color: #F0EFE9;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 70px;
+
+        .connect-links a {
+            margin-right: 10px;
+            padding-top: 15px;
+            color: black;
+            text-decoration: none;
+
+			&:active {
+				color:red; 
+			}
+        }
+    } 
+
+    .Connect {
+        h1 {
+            font-family: 'DM Sans, sans-serif';
+            font-weight: 700;
+            font-size: 76px;
+        }
+
+        p {
+            color: #626262;
+            font-size: 20px;
+            padding-top: 35px;
+            padding-bottom: 40px;
+        }
+
+        a {
+            margin-right: 10px;
+            padding-top: 15px;
+        }
+    }
+
+    .Background-lines-right {
+        position: absolute;
+        right: 68%;
+        top: 12%;
+    }
+// Contact Information section
+.contact-box {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .contact-boxes {
+        h3 {
+            color: red;
+        }
+    }
+}
+	// MAPS
+	.map-section {
+		gap: 50px;
+		height: 50%
+	}
+}
