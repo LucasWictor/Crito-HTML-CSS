@@ -344,8 +344,8 @@ header {
 	.Background-lines-right {
 		position: relative;
 		right: 45em;
-		top: 6em; // You can adjust the top position as needed
-		// z-index: -1; // Optional: This ensures the image is rendered behind other content
+		top: 6em; 
+
 	}
 
 }
@@ -547,9 +547,6 @@ header {
 
 //  SERVICES 
 .service-box {
-	.container {
-		
-	}
 	display: flex;
 	border: 1px solid #D3D3D3;
 	background-color: #F0EFE9;
@@ -880,7 +877,7 @@ header {
 		  transition: background-color 0.3s ease;
 	  
 		  &.active {
-			background-color: #191919; // Färg för den aktiva punkten
+			background-color: #191919; 
 		  }
 		}
 	  }
@@ -895,8 +892,6 @@ header {
   
 		.section-title {
 		  text-align: center;
-		  h2 {
-		  }
 		}
   
 		.Cards-container {
@@ -929,8 +924,7 @@ header {
 			gap: 40px;
 			align-items: center;
 			margin-right: 30px;
-			img {
-			}
+	
 			h3 {
 			  font-family: 'DM sans' sans-serif;
 			  font-size: 22px;
@@ -939,11 +933,6 @@ header {
 			p {
 			  text-align: center;
 			  color: orangered;
-			}
-		  }
-  
-		  .center-content {
-			.btn-black {
 			}
 		  }
 		}
@@ -983,6 +972,80 @@ header {
 	  }
 	}
   }
+// Article and news-section
+.articles-section {
+	position: relative;
+    .container {
+        .section-title {
+            text-align: left;
+            p {
+                font-size: 20px;
+            }
+            h2 {
+                display: flex;
+            }
+        }
+		.browseteam {
+			content: "";
+					position: absolute;
+					top: 22%;
+					right: 25%;
+				}
+		
+        
+        .article-box {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+
+			.article-pic:hover {
+				transform: scale(1.05);
+				transition: 0.3s ease;
+			  }
+        }
+
+        .guide-box {
+            width: 30%; 
+            margin-right: 2%; 
+            margin-bottom: 20px;
+            
+            p {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                color: #535353;
+            }
+
+            h3 {
+                font-family: 'DM sans', sans-serif;
+                font-weight: 600;
+            }
+        }
+
+        .carousel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+			margin-bottom: 50px;
+            
+            .dot {
+                width: 10px;
+                height: 10px;
+				background-color: #9a9a9a;
+                border-radius: 50%;
+                margin: 0 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                
+                &.active {
+                    background-color: #191919; 
+                }
+            }
+        }
+    }
+}
+
+
 //  Newsletter section
 .newsletter {
 	background-color: #F0EFE9;
@@ -1022,10 +1085,6 @@ header {
 
 	}
 }
-
-
-
-
 
 .footer {
     background-color: #0E1021;
