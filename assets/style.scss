@@ -358,19 +358,14 @@ header {
 	margin-top: 95px;
 	margin-bottom: 100px;
 
-	gap: px;
-
-	@media (min-width: 768px) {}
-
 
 	.photo {
 		padding: 0px;
 	}
 
-	@media (max-width: 768px) {
-		.sponsor {
-			gap: 20px;
-			/* Mindre gap när fönstret krymper */
+	@media (max-width: 992px) {
+		.photo {
+			display: none;
 		}
 	}
 }
@@ -381,60 +376,67 @@ header {
 
 
 }
-
+//  features section 
 .feature-section {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 30px;
-	border: 1px solid #D3D3D3;
-	margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border: 1px solid #D3D3D3;
+    margin-bottom: 100px;
 
+    .section-title {
+        margin-top: 30px;
+        margin-bottom: 120px;
+        padding: 20px;
+        margin-right: 60px;
 
-	.section-title {
-		margin-top: 30px;
-		margin-bottom: 120px;
-		padding: 20px;
-		margin-right: 60px;
+        h2 {
+            font-size: 50px;
+            margin-bottom: 40px;
+        }
+    }
 
+    .feature-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-right: 30px;
+        margin-top: 40px;
 
-		h2 {
-			font-size: 50px;
-			margin-bottom: 40px;
+        h3 {
+            font-size: 22px;
+        }
 
-		}
+        p {
+            color: #626262;
+            font-size: 17px;
+            padding-bottom: 40px;
+        }
+    }
 
-	}
+    /* Media Query  features */
+    @media (max-width: 992px) {
+        flex-direction: column; 
+        align-items: center; 
 
-	.feature-box {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 20;
-		margin-right: 30px;
-		margin-top: 40px;
+        .section-title {
+            margin-bottom: 20px; 
+            text-align: center; 
+            margin-right: 0; 
+        }
 
-
-
-		h3 {
-
-			font-size: 22px;
-		}
-
-		p {
-			color: #626262;
-			font-size: 17px;
-			padding-bottom: 40px;
-
-		}
-
-	}
-
+        .feature-box {
+            margin-right: 0; 
+        }
+    }
 }
 
 .header-text {
 	font-size: 2px;
 	font-weight: 500;
 }
+//  about us section
 .aboutus-section {
     .container {
         .aboutbox {
@@ -542,9 +544,6 @@ header {
     }
 }
 
-
-
-
 //  SERVICES 
 .service-box {
 	display: flex;
@@ -630,7 +629,6 @@ header {
 }
 
 // Why choose us section 
-
 .Why-us {
     position: relative;
 
@@ -940,7 +938,7 @@ header {
 	}
   }
   
-  // Media query för meetteam-section (phones)
+  // Media query forr meetteam-section
   @media (max-width: 968px) {
 	.meetteam-section {
 	  .container {
@@ -953,7 +951,9 @@ header {
 			}
 		  }
 		}
-  
+		.btn-blank {
+			display: none;
+		}
 		.testimonial {
 		  .Cards-container {
 			.card-reviews {
@@ -1043,7 +1043,25 @@ header {
             }
         }
     }
+	 /* Media Query article and news */
+	 @media (max-width: 992px) {
+        .container {
+            .guide-box {
+                width: 100%; 
+                margin-right: 0;
+            }
+
+            .carousel {
+                margin-top: 20px; 
+                margin-bottom: 20px; 
+            }
+			.browseteam {
+				display: none;
+			}
+        }
+    }
 }
+
 
 
 //  Newsletter section
@@ -1081,44 +1099,55 @@ header {
 			}
 
 		}
-
-
+	}
+	@media (min-width: 992px) {
+		.newsletter .container {
+			flex-direction: column; 
+			align-items: center; 
+		}
+			.Background-wavy-lines {
+				display: none;
+				
+			}
+		
 	}
 }
-
 .footer {
     background-color: #0E1021;
     position: relative;
+    
     .container {
         display: grid;
         grid-template-columns: auto 1fr auto;
         gap: 10px;
         padding-top: 130px;
         color: #ffffff;
-		.footer-lines {
-			position: absolute;
-			right: 0;
-			bottom: 45px;
-		}
-		.logo {
-			display: flex;
-			flex-direction: column;
-			align-items: center; 
-			max-width: 200px; 
-			margin-bottom: 20px; 
-	
-			img {
-				max-width: 100%; 
-			}
-	
-			.logo-text {
-				font-size: 14px;
-				color: #B6B6BC;
-				margin-top: 10px; 
-				overflow-wrap: break-word; 
-				max-width: 100%; 
-			}
-		}
+        
+        .footer-lines {
+            position: absolute;
+            right: 0;
+            bottom: 45px;
+        }
+        
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 200px;
+            margin-bottom: 20px;
+    
+            img {
+                max-width: 100%;
+            }
+    
+            .logo-text {
+                font-size: 14px;
+                color: #B6B6BC;
+                margin-top: 10px;
+                overflow-wrap: break-word;
+                max-width: 100%;
+            }
+        }
 
         .footer-links {
             display: grid;
@@ -1136,14 +1165,15 @@ header {
                 }
 
                 a {
-					color: #B6B6BC;
+                    color: #B6B6BC;
                     text-decoration: none;
                     margin-bottom: 10px;
-					transition: color 0.3s;
+                    transition: color 0.3s;
                 }
-				a:hover {
-					color: white;
-				}
+
+                a:hover {
+                    color: white;
+                }
             }
         }
     }
@@ -1162,10 +1192,10 @@ header {
 
         .social-media {
             display: flex;
-            align-items: center; 
-            margin-right: 290px; 
-			margin-bottom: 20px;
-            
+            align-items: center;
+            margin-right: 290px;
+            margin-bottom: 20px;
+
             a {
                 font-size: 20px;
                 text-decoration: none;
@@ -1177,7 +1207,37 @@ header {
 
     .underline {
         border-bottom: 1px solid #DAD9D3;
-    }
+	}
+	// footer media
+	@media (max-width: 992px) {
+		.container {
+
+		
+		.footer-links {
+			grid-template-columns: 1fr; 
+			margin-left: 0; 
+		}
+	
+		.footer-row {
+			flex-direction: column;
+			align-items: center; 
+			margin-bottom: 20px; 
+		}
+		.footer-lines {
+			display: block;
+			display: none;
+		}
+
+		}
+		.copyright {
+		display: flex;
+		align-items: center;
+		}
+		.social-media {
+		display: block;
+		display: none;
+		}
+	}	
 }
 
 // Contacts page 
@@ -1190,7 +1250,7 @@ header {
         flex-direction: column;
         align-items: center;
         padding-top: 70px;
-		padding-bottom: 70px;
+        padding-bottom: 70px;
 
         .connect-links a {
             margin-right: 10px;
@@ -1198,11 +1258,11 @@ header {
             color: black;
             text-decoration: none;
 
-			&:active {
-				color:red; 
-			}
+            &:active {
+                color: rgb(27, 146, 179);
+            }
         }
-    } 
+    }
 
     .Connect {
         h1 {
@@ -1229,22 +1289,84 @@ header {
         right: 68%;
         top: 22%;
     }
+}
+
 // Contact Information section
-.contact-box {
+.about-box {
     .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .contact-boxes {
+
+    .info-boxes {
+        margin-top: 100px;
+        border: 1px solid #DAD9D3;
+        padding: 45px 25px 60px;
+        display: flex; /* Add flex display */
+        align-items: center; /* Center align vertically */
+        
+        img {
+            margin-right: 20px; 
+        }
+
         h3 {
-            color: red;
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+}
+
+// Contact form
+.contact-form {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+    .container {
+        background-color: #F0EFE9;
+        padding: 100px 50px 150px; 
+		text-align: center;
+		font-family: 'DN sans' sans-serif;
+		font-weight: 400;
+         
+
+        .details {
+            margin: 0 auto;
+
+            input,
+            textarea { 
+                display: block;
+                margin: 20px auto;
+                padding: 15px 30px;
+                width: 100%;
+                border-radius: 30px; 
+				border: none;
+            }
+
+            textarea {
+                border-radius: 40px; 
+                resize: none;
+                margin-bottom: 40px;
+            }
+
+            button {
+                width: 100%;
+            }
         }
     }
 }
-	// MAPS
-	.map-section {
-		gap: 50px;
-		height: 50%
+
+
+// MAPS
+.map-section {
+ margin-top: 100px;
+
+	iframe {
+		width: 100vw;
+		height: 620px;
 	}
 }
